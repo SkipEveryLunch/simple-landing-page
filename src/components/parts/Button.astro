@@ -1,0 +1,9 @@
+---
+const { type } = Astro.props;
+---
+
+<button class={`button ${type === 'dark' ? 'dark' : 'light'}`}>
+  <span>
+    <slot />
+  </span>
+</button>

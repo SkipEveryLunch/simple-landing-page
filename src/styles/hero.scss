@@ -1,0 +1,16 @@
+.hero-container {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.hero {
+  max-width: 40%;
+  display: grid;
+  gap: 25px;
+}
+.hero-container h1 {
+  font-size: 40px;
+}
+.hero-container p {
+  font-size: 17.5px;
+}

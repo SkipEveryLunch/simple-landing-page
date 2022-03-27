@@ -1,0 +1,38 @@
+@import './baselayout.scss';
+@import './navbar.scss';
+@import './hero.scss';
+@import './footer.scss';
+@import './button.scss';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --text-dark: rgb(45, 35, 35);
+  --text-white: rgb(242, 242, 255);
+  --transparent-dark: rgba(45, 35, 35, 0.6);
+  --shadow: rgba(45, 35, 35, 0.15);
+  --accent-one: rgb(219, 157, 49);
+  --accent-two: rgb(173, 129, 52);
+}
+h1,
+P,
+span,
+small {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 130%;
+  }
+}
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--text);
+}

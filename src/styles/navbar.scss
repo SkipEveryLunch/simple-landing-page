@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  background-color: var(--transparent-dark);
+}
+.logo {
+  font-size: 125%;
+  font-weight: 750;
+  text-transform: uppercase;
+  color: var(--text-white);
+}
+.navlinks {
+  display: flex;
+  gap: 25px;
+}
+.navlink {
+  padding: 20px 10px;
+  cursor: pointer;
+  & a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text-white);
+    font-weight: 300;
+  }
+  &:hover {
+    background-color: var(--shadow);
+  }
+}

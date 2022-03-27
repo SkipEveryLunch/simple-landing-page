@@ -1,0 +1,21 @@
+---
+  import Navlink from "../parts/Navlink.astro"
+  const linkData = [
+    {name:"products",path:"#"},
+    {name:"about us",path:"#"},
+    {name:"contact",path:"#"}
+  ]
+---
+
+<header class="navbar">
+  <div class="container">
+    <div class="logo">Logo goes here</div>
+    <nav class="navlinks">
+{
+  linkData.map(link=>(
+    <Navlink name={link.name} path={link.path}/>
+  ))
+}
+</nav>
+  </div>
+</header>

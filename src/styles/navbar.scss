@@ -2,27 +2,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 25px;
+  padding: 0 var(--size-3);
   background-color: var(--transparent-dark);
 }
 .logo {
-  font-size: 125%;
-  font-weight: 750;
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-6);
   text-transform: uppercase;
   color: var(--text-white);
 }
 .navlinks {
   display: flex;
-  gap: 25px;
+  gap: var(--size-3);
 }
 .navlink {
-  padding: 20px 10px;
+  padding: var(--size-3) var(--size-2);
   cursor: pointer;
   & a {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--text-white);
-    font-weight: 300;
+    font-weight: var(--font-weight-3);
   }
   &:hover {
     background-color: var(--shadow);

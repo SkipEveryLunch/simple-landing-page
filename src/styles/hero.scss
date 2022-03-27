@@ -4,13 +4,26 @@
   place-items: center;
 }
 .hero {
-  max-width: 40%;
+  max-width: 75%;
   display: grid;
-  gap: 25px;
+  gap: var(--size-2);
+}
+@media (min-width: 900px) {
+  .hero {
+    max-width: 50%;
+    display: grid;
+    gap: var(--size-4);
+  }
 }
 .hero-container h1 {
-  font-size: 40px;
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-7);
 }
 .hero-container p {
-  font-size: 17.5px;
+  font-size: var(--font-size-1);
+  line-height: var(--font-lineheight-1);
+}
+.button-wrapper {
+  display: flex;
+  gap: var(--size-2);
 }

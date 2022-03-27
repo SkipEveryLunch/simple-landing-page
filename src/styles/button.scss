@@ -1,26 +1,25 @@
 .button {
-  padding: 15px 20px;
+  padding: var(--size-2) var(--size-3);
   cursor: pointer;
 
   & span {
     text-transform: uppercase;
-    font-size: large;
-    letter-spacing: 1px;
+    font-size: var(--font-size-1);
   }
   &.dark {
     border: solid 1px var(--accent-one);
     background-color: var(--accent-one);
     color: var(--text-white);
-    font-weight: 400;
+    font-weight: var(--font-weight-4);
     &:hover {
       background-color: var(--accent-two);
     }
   }
   &.light {
-    border: solid 2px var(--accent-one);
+    border: solid 1px var(--accent-one);
     color: var(--accent-one);
     background-color: transparent;
-    font-weight: 500;
+    font-weight: var(--font-weight-5);
     &:hover {
       background-color: var(--shadow);
     }

@@ -1,8 +1,9 @@
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   padding: 0 var(--size-3);
+  height: var(--size-fluid-5);
   background-color: var(--transparent-dark);
 }
 .logo {
@@ -10,21 +11,67 @@
   font-weight: var(--font-weight-6);
   text-transform: uppercase;
   color: var(--text-white);
+  display: grid;
+  place-items: center;
 }
 .navlinks {
   display: flex;
-  gap: var(--size-3);
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0;
+  flex-direction: column;
+  gap: var(--size-5);
+  padding-bottom: var(--size-4);
+  position: absolute;
+  background-color: var(--transparent-dark);
+  top: var(--size-fluid-5);
+  left: 0;
+  right: 0;
+  text-align: center;
+  transition: 0.5s;
+}
+.navlinks[aria-expanded='true'] {
+  transform: scaleY(1);
+  opacity: 1;
+}
+.button--menu {
+  background-color: transparent;
+  border: none;
+  color: var(--text-white);
+  margin: var(--size-2) 0;
 }
 .navlink {
-  padding: var(--size-3) var(--size-2);
+  display: grid;
+  place-items: center;
+  padding: 0 var(--size-2);
   cursor: pointer;
   & a {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--text-white);
+    font-size: var(--font-size-3);
     font-weight: var(--font-weight-3);
   }
   &:hover {
     background-color: var(--shadow);
+  }
+}
+
+@media (min-width: 900px) {
+  .button--menu {
+    display: none;
+  }
+  .navlinks {
+    flex-direction: row;
+    position: static;
+    border: none;
+    padding: 0;
+    inset: initial;
+    background-color: transparent;
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  .navlink a {
+    font-size: var(--font-size-1);
   }
 }

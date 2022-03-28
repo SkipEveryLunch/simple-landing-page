@@ -1,4 +1,5 @@
 ---
+  import { Icon } from 'astro-icon'
   import Navlink from "../parts/Navlink.astro"
   const linkData = [
     {name:"products",path:"#"},
@@ -10,12 +11,16 @@
 <header class="navbar">
   <div class="container">
     <div class="logo">Logo goes here</div>
-    <nav class="navlinks">
+    <nav class="navlinks" id="navlinks">
 {
   linkData.map(link=>(
     <Navlink name={link.name} path={link.path}/>
   ))
 }
-</nav>
+    </nav>
+      <button class="button button--menu" id="menu-btn" aria-expanded="false" aria-label="Open mobile nav">
+        <Icon name="feather:menu" width={25}/>
+      </button>
   </div>
 </header>
+<script type="module" src={(await import("../../scripts/dropdown.js?url")).default}></script>
